@@ -19,7 +19,7 @@
       "navigation/*": ["app/navigation/*"],
       "screens": ["app/screens"],
       "screens/*": ["app/screens/*"],
-      "splash": ["app/screens/splash"],
+      "splash": ["app/screens/main"],
       "utils": ["app/utils"],
       "utils/*": ["app/utils/*"],
       "translations": ["app/utils/translations"],
