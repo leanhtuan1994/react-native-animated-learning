@@ -115,13 +115,18 @@ const Splash: ScreenComponent<SplashParam, "Splash"> = ({}) => {
       <View style={{ backgroundColor: "white" }}>
         <SafeAreaView>
           <Animated.ScrollView
-            onScroll={event([
-              {
-                nativeEvent: {
-                  contentOffset: { y: scrollY },
+            onScroll={event(
+              [
+                {
+                  nativeEvent: {
+                    contentOffset: { y: scrollY },
+                  },
                 },
+              ],
+              {
+                useNativeDriver: true,
               },
-            ])}
+            )}
             scrollEventThrottle={16}
             contentContainerStyle={{ paddingHorizontal: 20 }}
             showsVerticalScrollIndicator={false}>
