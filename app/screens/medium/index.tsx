@@ -110,6 +110,11 @@ const Splash: ScreenComponent<SplashParam, "Splash"> = ({}) => {
     extrapolate: Extrapolate.CLAMP,
   });
 
+  const creditTranslateY = scrollY.interpolate({
+    inputRange,
+    outputRange: [60, 60, 60, 0, 0],
+  });
+
   return (
     <>
       <View style={{ backgroundColor: "white" }}>
@@ -208,10 +213,7 @@ const Splash: ScreenComponent<SplashParam, "Splash"> = ({}) => {
                   {
                     transform: [
                       {
-                        translateX: scrollY.interpolate({
-                          inputRange,
-                          outputRange: [60, 60, 60, 0, 0],
-                        }),
+                        translateX: creditTranslateY,
                       },
                     ],
                   },
